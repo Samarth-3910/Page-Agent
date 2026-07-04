@@ -214,6 +214,28 @@
   .demo-note{ margin-top: 16px; font-size: 12.5px; color: var(--text-dim); line-height: 1.6; }
   .demo-note a{ color: var(--text-muted); text-decoration: underline; }
 
+  .privacy-warning{
+    display:flex;
+    gap: 12px;
+    align-items:flex-start;
+    background: rgba(245,166,35,0.06);
+    border: 1px solid rgba(245,166,35,0.3);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .privacy-warning .mark{
+    color: var(--amber);
+    font-family: var(--mono);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .privacy-warning strong{ color: var(--text); }
+  .privacy-warning a{ color: var(--amber); text-decoration: underline; }
+
   .inspector-tag{
     position: fixed; font-family: var(--mono); font-size: 11px; color: var(--mint);
     background: #0d1a12; border: 1px solid rgba(74,222,128,0.35); padding: 2px 6px;
@@ -321,6 +343,18 @@
 
 <section class="demo" id="demo">
   <div class="wrap">
+    <div class="privacy-warning">
+      <span class="mark">!</span>
+      <span>
+        <strong>Before you try this:</strong> the free demo below runs on Page Agent's public demo LLM,
+        which routes through Alibaba's infrastructure in China. Whatever you type into the command box
+        and the page content it reads to act on your command is sent to that service. Don't enter real
+        names, emails, passwords, or any other sensitive or personal information here; use the sample data
+        already in the fields or made-up values instead. Read the
+        <a href="https://alibaba.github.io/page-agent/docs/features/models#free-testing-api" target="_blank" rel="noopener">full documentation and terms</a>
+        before using this in anything beyond casual testing.
+      </span>
+    </div>
     <div class="demo-shell">
       <div class="demo-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
